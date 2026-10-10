@@ -1,0 +1,10 @@
+services:
+  releaselab:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      APP_VERSION: ${APP_VERSION:-v1}
+      READY_DELAY_SECONDS: ${READY_DELAY_SECONDS:-0}
+      NEVER_READY: ${NEVER_READY:-false}
+    restart: unless-stopped
