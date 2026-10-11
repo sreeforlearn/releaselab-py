@@ -13,3 +13,4 @@ permissions:
 jobs:
   python-ci:
     uses: sreeforlearn/platform-devops/.github/workflows/python-ci.yml@main
+    secrets: inherit
